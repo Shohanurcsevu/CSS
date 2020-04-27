@@ -42,88 +42,70 @@ body {
   animation-timing-function: ease-out;
 }
 
-.primary-heading{
-    color: #fff;
-    text-transform: uppercase;
-
-
+.primary-heading {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
 }
-.primary-heading-main{
-    display: block;
-    font-size: 60px;
-    font-weight: 400;
-    letter-spacing: 35px;
-    animation-name: moveInleft;
-    animation-duration: 1s;
-    -timing-function: ease-out;
-    
-
+.primary-heading-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  animation-name: moveInleft;
+  animation-duration: 1s;
+  -timing-function: ease-out;
 }
-.primary-heading-sub{
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 17.5px;
-    animation: moveInRight 1s ease-out;
-
+.primary-heading-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.5px;
+  animation: moveInRight 1s ease-out;
 }
 
-.text-box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@keyframes moveInleft{
-    0%{
-        opacity: 0;
-        transform: translateX(-100px);
-
-    }
-    80%{
-        transform: translateX(20px);
-
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-
-    }
+@keyframes moveInleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-@keyframes logoAnimation{
-
-  0%{
+@keyframes logoAnimation {
+  0% {
     opacity: 0;
     transform: translateY(30px);
-
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateY(0);
-
+  }
+}
+@keyframes moveInRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
   }
 
-}
-@keyframes moveInRight{
- 
-   0%{
-     transform: translateX(100px);
-     opacity: 0;
+  80% {
+    transform: translateX(-20px);
+  }
 
-   }
-
-   80%{
-
-     transform: translateX(-20px);
-
-   }
-
-   100%{
-     transform: translateX(0);
-     opacity: 1;
-
-
-   }
-
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
